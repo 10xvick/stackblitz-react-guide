@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 
 export default function Ex_useEffect() {
-  const [count, setCount] = useState(0);
   const [flag, setFlag] = useState(false);
 
   useEffect(() => {

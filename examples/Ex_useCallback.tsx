@@ -10,14 +10,13 @@ export default function Ex_useCallback() {
     },
     [count]
   );
-    
+
   // const double = ()=>count*2;
 
   return (
     <div>
       useCallback:&nbsp;
       <button onClick={() => setFlag(!flag)}>{flag ? 'on' : 'off'}</button>
-      &nbsp;
       x: <button onClick={() => setCount(count + 1)}>{count}</button> |
       <List double={double} />
     </div>
