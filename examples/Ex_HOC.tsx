@@ -1,37 +1,23 @@
 
-// Define a Higher Order Component (HOC) as a function
-const withColor = (WrappedComponent, color) => {
-  // Return a new functional component
-  return (props) => {
-    // Enhance the original component with a new prop
-    // that sets the text color
-    const style = {
-      color: color,
-    };
+function SimpleComponent({type}){
+  return <>{type} Component</>
+}
 
-    // Render the wrapped component with the enhanced prop
-    return (
-      <div style={style}>
-        <WrappedComponent {...props} />
-      </div>
-    );
-  };
-};
+function HOC_generator(Component,color){
+  return (props)=>{
+    return <span style={{color:color}}> <Component {...props}/> </span>
+  }
+}
 
-// Create a simple component
-const MyComponent = (props) => {
-  return <div>This is my component</div>;
-};
+const ModifiedComponent = HOC_generator(SimpleComponent,'red')
 
-// Use the HOC to enhance MyComponent
-const RedTextComponent = withColor(MyComponent, 'red');
-
-// Now, use the enhanced component
 export default function Ex_HOC() {
+  
   return (
     <div>
-      <MyComponent />
-      <RedTextComponent />
+      Higher Order Component
+      <br/>
+      <SimpleComponent type={'Original'}/> | <ModifiedComponent type={'Modified'}/>
     </div>
   );
 }
