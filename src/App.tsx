@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import Ex_HOC from '../examples/Ex_HOC';
 import Ex_useCallback from '../examples/Ex_useCallback';
 import Ex_useEffect from '../examples/Ex_useEffect';
 import Ex_useMemo from '../examples/Ex_useMemo';
@@ -16,6 +17,8 @@ export const App = () => {
       <Ex_useCallback/>
       <hr/>
       <Ex_useEffect/>
+      <hr/>
+      <Ex_HOC/>
     </div>
   );
 };

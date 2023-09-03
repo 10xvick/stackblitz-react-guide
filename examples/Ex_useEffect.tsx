@@ -4,16 +4,17 @@ export default function Ex_useEffect() {
   const [count, setCount] = useState(0);
   const [flag, setFlag] = useState(false);
 
-  // component did mount
   useEffect(() => {
     console.log('component did mount');
   }, []);
 
-  // component did update
   useEffect(() => {
     console.log('component did update');
+  }, []);
 
-    // component will unmount
+  useEffect(() => {
+    console.log('component did update : for state flag');
+
     return () => {
       console.log('component will unmount');
     };
@@ -22,7 +23,7 @@ export default function Ex_useEffect() {
   return (
     <div>
       useEffect
-      <div onClick={() => setFlag(!flag)}>{flag ? 'on' : 'off'}</div>
+      <button onClick={() => setFlag(!flag)}>{flag ? 'on' : 'off'}</button>
     </div>
   );
 }
