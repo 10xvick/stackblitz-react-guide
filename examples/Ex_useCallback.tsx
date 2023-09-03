@@ -15,9 +15,9 @@ export default function Ex_useCallback() {
 
   return (
     <div>
-      useCallback:
+      useCallback:&nbsp;
       <button onClick={() => setFlag(!flag)}>{flag ? 'on' : 'off'}</button>
-      <br/>
+      &nbsp;
       x: <button onClick={() => setCount(count + 1)}>{count}</button> |
       <List double={double} />
     </div>
