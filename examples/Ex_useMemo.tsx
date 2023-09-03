@@ -14,9 +14,11 @@ export default function Ex_useMemo() {
 
   return (
     <div>
-      useMemo:{' '}
-      <button onClick={() => setFlag(!flag)}>{flag ? 'on' : 'off'}</button> x:{' '}
-      <button onClick={() => setCount(count + 1)}>{count}</button> | 2x:{double}
+      useMemo:&nbsp;
+      <button onClick={() => setFlag(!flag)}>
+        {flag ? 'on' : 'off'}
+      </button> x: <button onClick={() => setCount(count + 1)}>{count}</button>{' '}
+      | 2x:{double}
     </div>
   );
 }
