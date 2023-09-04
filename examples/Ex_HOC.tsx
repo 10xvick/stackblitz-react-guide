@@ -3,19 +3,19 @@ function SimpleComponent({type}){
   return <>{type} Component</>
 }
 
-function HOC_generator(Component,color){
+function HOC_fn(Component,color){
   return (props)=>{
     return <span style={{color:color}}> <Component {...props}/> </span>
   }
 }
 
-const ModifiedComponent = HOC_generator(SimpleComponent,'red')
+const ModifiedComponent = HOC_fn(SimpleComponent,'red')
 
 export default function Ex_HOC() {
   
   return (
     <div>
-      Higher Order Component
+      Higher Order Component (HOC)
       <br/>
       <SimpleComponent type={'Original'}/> | <ModifiedComponent type={'Modified'}/>
     </div>

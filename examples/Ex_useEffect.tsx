@@ -21,7 +21,7 @@ export default function Ex_useEffect() {
 
   return (
     <div>
-      useEffect
+      useEffect:&nbsp;
       <button onClick={() => setFlag(!flag)}>{flag ? 'on' : 'off'}</button>
     </div>
   );
