@@ -101,6 +101,10 @@ h1 {
   padding-bottom: 0.5rem;
   cursor: pointer;
 }
+.active {
+  background: var(--color-tr-2);
+  -webkit-text-fill-color: var(--gradient);
+}
 
 .Ex_container {
   overflow: scroll;

@@ -2,10 +2,6 @@ import { FC, useState } from 'react';
 import { Ex_container } from '../components/Ex_container';
 import Sidebar from '../components/Sidebar';
 
-
-
-
-
 import './style.css';
 
 
@@ -15,7 +11,7 @@ export const App = () => {
 
   return (
     <div className='App'>
-      <Sidebar select={select}/>
+      <Sidebar select={select} selected={selected}/>
       <Ex_container selected={selected}/>
     </div>
   );

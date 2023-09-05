@@ -15,8 +15,6 @@ export default function Ex_HOC() {
   
   return (
     <div>
-      Higher Order Component (HOC)
-      <br/>
       <SimpleComponent type={'Original'}/> | <ModifiedComponent type={'Modified'}/>
     </div>
   );

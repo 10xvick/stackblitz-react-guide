@@ -12,7 +12,7 @@ export default function Ex_useEffect() {
   }, []);
 
   useEffect(() => {
-    console.log('component did update : for state flag');
+    console.log('component did update : for selected state(s)');
 
     return () => {
       console.log('component will unmount');
@@ -21,7 +21,6 @@ export default function Ex_useEffect() {
 
   return (
     <div>
-      useEffect:&nbsp;
       <button onClick={() => setFlag(!flag)}>rerender</button>
     </div>
   );
