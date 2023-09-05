@@ -38,16 +38,13 @@ button {
   box-shadow: 0 0 6px 0.2px #ffffff7d;
 }
 
-.g-text,
+.g-text,.sidebar-text,
 h1 {
   background: var(--gradient);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 2px var(--gradient);
-}
-
-.effected {
 }
 
 .container {
@@ -82,20 +79,24 @@ h1 {
 .sidebar {
   background-color:var(--color-tr-2);
   height: 100vh;
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
+  direction: rtl;
 }
 
-.sidebar > div {
-  display: flex;
-  flex-direction: column;
+.sidebar-list  {
   writing-mode: tb;
   rotate: 180deg;
   color: rgba(255, 255, 255, 0.5);
+  padding-top: 2rem;
 }
 
-.sidebar div {
-  padding: 1rem;
+.sidebar-text{
+  font-size: 2rem;
+  font-weight: bolder;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  cursor: pointer;
 }
 
 .Ex_container {

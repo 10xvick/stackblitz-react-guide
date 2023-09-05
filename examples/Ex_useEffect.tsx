@@ -8,7 +8,7 @@ export default function Ex_useEffect() {
   }, []);
 
   useEffect(() => {
-    console.log('component did update');
+    console.log('component did update : for any state');
   }, []);
 
   useEffect(() => {
@@ -22,7 +22,7 @@ export default function Ex_useEffect() {
   return (
     <div>
       useEffect:&nbsp;
-      <button onClick={() => setFlag(!flag)}>{flag ? 'on' : 'off'}</button>
+      <button onClick={() => setFlag(!flag)}>rerender</button>
     </div>
   );
 }
