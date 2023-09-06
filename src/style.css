@@ -12,6 +12,8 @@
   color: #fcf9ff;
 }
 
+*{transition: all 1s;}
+
 body {
   margin: 0px;
 }
