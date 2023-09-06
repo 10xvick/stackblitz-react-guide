@@ -5,12 +5,15 @@ export default function Ex_Suspense(){
 
   useEffect(()=>{
     const ref = setInterval(()=>{
-      setData(e=>(e?null:'x'));
-    })
+      setData(e=>(e?undefined:'x'));
+    },2000);
+
+    return ()=>{
+      clearInterval(ref);
+    }
   }, [])
   return <div>
     <Suspense fallback={<div>Loading...</div>}>
-      suspense
       {Data}
     </Suspense>
   </div>
