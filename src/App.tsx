@@ -7,7 +7,7 @@ import './style.css';
 
 export const App = () => {
 
-  const [selected, select] = useState('useEffect');
+  const [selected, select] = useState('Suspense');
 
   return (
     <div className='App'>
