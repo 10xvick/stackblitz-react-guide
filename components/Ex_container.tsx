@@ -4,10 +4,11 @@ import Ex_Suspense from '../examples/Ex_Suspense';
 import Ex_useCallback from '../examples/Ex_useCallback';
 import Ex_useEffect from '../examples/Ex_useEffect';
 import Ex_useMemo from '../examples/Ex_useMemo';
+import Ex_useTransition from '../examples/Ex_useTransition';
 import Decorator_HOC from '../src/decorators/Decorator_HOC';
 
 export const Ex_components = {};
-[Ex_useEffect, Ex_useMemo, Ex_useCallback, Ex_Composition, Ex_HOC,Ex_Suspense].map((e) => {
+[Ex_useEffect, Ex_useMemo, Ex_useCallback, Ex_useTransition, Ex_Composition, Ex_HOC,Ex_Suspense].map((e) => {
   Ex_components[e.name.split('_')[1]] = Decorator_HOC(e);
 });
 
