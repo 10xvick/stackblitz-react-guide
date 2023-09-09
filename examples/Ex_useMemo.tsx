@@ -10,8 +10,6 @@ export default function Ex_useMemo() {
     return count * 2;
   }, [count]);
 
-  // const double = ()=>count*2;
-
   return (
     <div>
       <button onClick={() => setFlag(!flag)}>

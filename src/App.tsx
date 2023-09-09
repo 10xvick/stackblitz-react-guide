@@ -7,7 +7,7 @@ import './style.css';
 
 export const App = () => {
 
-  const [selected, select] = useState('useTransition');
+  const [selected, select] = useState('useReducer');
 
   return (
     <div className='App'>

@@ -34,12 +34,11 @@ const wrapPromise = (promise) => {
 
 const getdata = wrapPromise(
   new Promise((res, rej) => {
-    setTimeout(() => rej('success'), 4000);
+    setTimeout(() => res('success'), 4000);
   })
 );
 
 const MyComponent = () => {
   const data = getdata.read();
-
   return <div> data: {data} </div>;
 };
