@@ -7,7 +7,7 @@ import './style.css';
 
 export const App = () => {
 
-  const [selected, select] = useState('useReducer');
+  const [selected, select] = useState('useImperativeHandle');
 
   return (
     <div className='App'>
