@@ -1,27 +1,29 @@
 import { useEffect, useInsertionEffect, useLayoutEffect, useRef, useState } from "react"
 
 export default function Ex_useInsertionEffect(){
-  const [data,setData] = useState(false);
+  const [count,setcount] = useState(0);
   const ref = useRef();
 
   let x = 0;
   function test(){
     console.log( ref.current?.innerText, ++x);
   }
-  
+  const state = {};
   useEffect(()=>{
     test();
-  },[]);
+    state['useEffect'] = 0;
+  });
   
   useLayoutEffect(()=>{
     test();
-  },[]);
+    state['useLayoutEffect'] = 0;
+  });
   
   useInsertionEffect(()=>{
     test();
-  },[]); 
+    state['useInsertionEffect'] = 0;
+  }); 
 
-  return <button onClick={()=>setData(!data)} ref={ref}> x: {data} 
-  </button>
+  return <button ref={ref} onClick={()=>{setcount(count+1)}}>{count}</button>
 }
 
