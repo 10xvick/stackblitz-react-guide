@@ -7,7 +7,7 @@ import './style.css';
 
 export const App = () => {
 
-  const [selected, select] = useState('useInsertionEffect');
+  const [selected, select] = useState('useLayoutEffect');
 
   return (
     <div className='App'>

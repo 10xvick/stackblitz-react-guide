@@ -6,8 +6,9 @@ export default function Ex_useInsertionEffect(){
 
   let x = 0;
   function test(){
-    console.log( ref.current?.innerText, ++x);
+    console.log( document.getElementById('btn')?.innerText,  ref.current?.innerText, ++x);
   }
+
   const state = {};
   useEffect(()=>{
     test();
@@ -24,6 +25,13 @@ export default function Ex_useInsertionEffect(){
     state['useInsertionEffect'] = 0;
   }); 
 
-  return <button ref={ref} onClick={()=>{setcount(count+1)}}>{count}</button>
+  return <button id='btn' ref={ref} onClick={()=>{setcount(count+1)}}>{count}</button>
 }
+
+
+/**
+ 
+  useInsertionEffect is called "Insertion" because it runs synchronously before all other DOM mutations have been applied. This allows you to perform side effects that need to run before any other styles or elements are inserted into the DOM, such as inserting global DOM nodes like 'style' or SVG 'defs' in the document head.
+
+ */
 
