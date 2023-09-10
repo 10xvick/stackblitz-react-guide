@@ -7,7 +7,7 @@ import './style.css';
 
 export const App = () => {
 
-  const [selected, select] = useState('useImperativeHandle');
+  const [selected, select] = useState('useInsertionEffect');
 
   return (
     <div className='App'>

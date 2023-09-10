@@ -7,9 +7,9 @@ export default function Ex_useContext(){
 const Context = createContext({});
 
 function Parent({}){
-  const [data,setdata] = useState('context')
+  const [data,setdata] = useState(0)
   return <Context.Provider value={data}>
-    parent : 
+    <button onClick={()=>setdata(data+1)}>parent</button> : 
     <Child/>
   </Context.Provider>
 }
