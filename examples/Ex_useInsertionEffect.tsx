@@ -19,7 +19,7 @@ export default function Ex_useInsertionEffect(){
   
   useInsertionEffect(()=>{
     test();
-  },[]);
+  },[]); 
 
   return <button onClick={()=>setData(!data)} ref={ref}> x: {data} 
   </button>
