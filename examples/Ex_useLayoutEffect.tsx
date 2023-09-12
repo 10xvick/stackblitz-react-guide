@@ -1,28 +1,53 @@
-import { useEffect, useLayoutEffect, useRef, useState } from "react"
+import { forwardRef, useEffect, useInsertionEffect, useLayoutEffect, useRef, useState } from "react"
 
 export default function Ex_useLayoutEffect(){
-  const [show,setshow] = useState(false);
-  const [ref1,ref2] = [useRef(),useRef()];
-
-
-  function some_layout_operation(){
-    const bottom = ref1.current?.getBoundingClientRect().bottom;
-    console.log(bottom);
-    if(!ref2.current) return;
-    ref2.current.style.top = bottom + 'px';
-  }
-  useEffect(()=>{
-    some_layout_operation();
-  },[show])
+  const [show,setshow] = useState(true);
+  const ref = useRef();
   
   useLayoutEffect(()=>{
-  },[show]);
-  
+    if(!show) return;
+    
+  },[show])
+
   return <>
-  <button onClick={()=>setshow(!show)} ref={ref1}> 1 </button>
-  {show && <button ref={ref2} style={{position:'absolute'}}> 2 </button>}
+    <button onClick={()=>setshow(!show)}>toggle</button>
+    {show && <ChatWindow messages={Array(100000).fill('abc').map(e=>Math.random())}/>}
   </>
 }
+
+
+function ChatWindow({ messages }) {
+  const [shouldScroll, setShouldScroll] = useState(true);
+  const chatWindowRef = useRef(null);
+
+  useEffect(() => {
+    if (shouldScroll) {
+      const chatWindow = chatWindowRef.current;
+      chatWindow.scrollTop = chatWindow.scrollHeight;
+      setShouldScroll(false);
+    }
+  }, [messages]);
+
+  const handleScroll = () => {
+    const chatWindow = chatWindowRef.current;
+    const isScrolledToBottom =
+      chatWindow.scrollHeight - chatWindow.scrollTop === chatWindow.clientHeight;
+    setShouldScroll(isScrolledToBottom);
+  };
+
+  return (
+    <div
+      ref={chatWindowRef}
+      onScroll={handleScroll}
+      style={{ height: '400px', overflowY: 'scroll' }}
+    >
+      {messages.map((message, index) => (
+        <div key={index}>{message}</div>
+      ))}
+    </div>
+  );
+}
+
 
 /**
  
