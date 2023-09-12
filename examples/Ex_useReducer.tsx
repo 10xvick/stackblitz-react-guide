@@ -2,7 +2,6 @@ import { useReducer,
   useState,
   useRef,
   useDebugValue,
-  useSyncExternalStore,
   useId } from "react"
 
 const reducer = (state,action )=>{
