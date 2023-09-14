@@ -3,14 +3,14 @@ import { useEffect, useLayoutEffect, useRef} from "react"
 export default function Ex_useLayoutEffect(){
   const ref = useRef();
   
-  // useEffect
+  //useEffect
   useLayoutEffect
   (()=>{
     ref.current.style.background = 'none';
   },[])
 
   return <>
-    <div style={{background:'red'}} ref={ref}> abc </div>
+    <div style={{background:'red'}} ref={ref}> I flicker with useEffect but not useLayoutEffect </div>
     <div style={{display:'none'}}>{Array(100000).fill(<div></div>)}</div>
   </>
 }
