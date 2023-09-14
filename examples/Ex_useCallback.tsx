@@ -11,8 +11,6 @@ export default function Ex_useCallback() {
     [count]
   );
 
-  // const double = ()=>count*2;
-
   return (
     <div>
       <button onClick={() => setFlag(!flag)}>
