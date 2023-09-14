@@ -10,7 +10,7 @@ export default function Ex_useLayoutEffect(){
   },[])
 
   return <>
-    <div style={{background:'red'}} ref={ref}> I flicker with useEffect but not useLayoutEffect </div>
+    <div style={{background:'red'}} ref={ref}> I flicker with useEffect but not with useLayoutEffect </div>
     <div style={{display:'none'}}>{Array(100000).fill(<div></div>)}</div>
   </>
 }
