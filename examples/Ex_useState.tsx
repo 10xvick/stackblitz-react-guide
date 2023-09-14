@@ -5,8 +5,7 @@ export default function Ex_useState() {
 
   return (
     <div>
-      <button onClick={() => setvalue(value - 1)}>-</button>
-      {value}
+      <button onClick={() => setvalue(value - 1)}>-</button> {value}{' '}
       <button onClick={() => setvalue((e) => e + 1)}>+</button>
     </div>
   );
