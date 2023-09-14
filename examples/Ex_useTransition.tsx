@@ -23,7 +23,7 @@ export default function Ex_useTransition(){
 
 function List({list}){
   const deferedlist = useDeferredValue(list)
-  return <ul style={{'max-height':'100px','overflow':'scroll'}}>{deferedlist}</ul>
+  return <ul style={{'maxHeight':'100px','overflow':'scroll'}}>{deferedlist}</ul>
 }
 
 

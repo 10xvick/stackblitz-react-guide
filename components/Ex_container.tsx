@@ -17,7 +17,7 @@ import Decorator_HOC from '../src/decorators/Decorator_HOC';
 export const components = 
 [Ex_useEffect, Ex_useLayoutEffect, Ex_useInsertionEffect, Ex_useMemo, Ex_useCallback, Ex_useTransition, Ex_useDeferredValue, Ex_useImperativeHandle, Ex_useContext, Ex_useReducer, Ex_Suspense, Ex_Composition, Ex_HOC]
 
-const routes = components.map((e) => {
+export const routes = components.map((e) => {
   const name = e.name.split('_')[1];
   return {component:Decorator_HOC(e,name),name:name };
 });

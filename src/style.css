@@ -54,7 +54,7 @@ input {
 }
 
 .g-text,
-.sidebar-text,
+.sidebar-list>a,
 h1 {
   background: var(--gradient);
   -webkit-background-clip: text;
@@ -112,7 +112,7 @@ h1 {
   padding-top: 2rem;
 }
 
-.sidebar-text {
+.sidebar-list>a {
   font-size: 2rem;
   font-weight: bolder;
   padding-top: 0.5rem;
