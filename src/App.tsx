@@ -4,15 +4,13 @@ import Sidebar from '../components/Sidebar';
 
 import './style.css';
 
-
 export const App = () => {
-
   const [selected, select] = useState('useLayoutEffect');
 
   return (
-    <div className='App'>
-      <Sidebar select={select} selected={selected}/>
-      <Ex_container selected={selected}/>
+    <div className="App">
+      <Sidebar />
+      <Ex_container />
     </div>
   );
 };

@@ -50,7 +50,7 @@ export const Ex_container = () => {
   return (
     <div className="Ex_container">
       <Routes>
-        {routes.map(E=><Route path={'/'+E.name} element={<E.component/>}/>)}
+        {routes.map(E=><Route key={E.name} path={'/'+E.name} element={<E.component/>}/>)}
       </Routes>
     </div>
   );
