@@ -1,5 +1,13 @@
+import { defenitions } from "../data/defenitions";
 
 
-export default function Decorator_HOC(Component,more_props?){
-  return (props)=><div className='container'><Component props={...props}/></div>
+export default function Decorator_HOC(Component,name){
+  return (props)=><div className='container'>
+    <div>{defenitions[name]}</div>
+    <br/>
+    Example:
+    <div className='component-panel'>
+      <Component props={...props}/>
+    </div>
+  </div>
 }
