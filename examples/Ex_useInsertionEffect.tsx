@@ -6,12 +6,14 @@ export default function Ex_useInsertionEffect() {
 
   useInsertionEffect(() => {
     const e = document.getElementById('btn') || ref.current?.innerText;
+
     console.log(
       e ||
         'element is not found on in the dom since it has not been inserted yet'
     );
+
     if (e) e.style.color = 'yellow';
-  }, []);
+  }, [count]);
 
   return (
     <button

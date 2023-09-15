@@ -7,7 +7,7 @@ export default function Decorator_HOC(Component,name){
     <br/>
     <p>Example:</p>
     <div className='component-panel'>
-      <Component props={...props}/>
+      <Component {...props}/>
     </div>
   </div>
 }
