@@ -4,7 +4,7 @@ export const defenitions = {
     "Synchronizes a React component's state with an external data store.",
   HOC: 'A function that takes a component and returns a new component with extended functionality.',
   Composition:
-    'A design pattern in React where smaller components are combined to create more complex ones.',
+    'Ability to pass and render content between the opening and closing tags of a custom component. This is achieved using the props.children property, allowing for flexible and reusable component structures.',
   Suspense:
     'A component that lets you "suspend" rendering while waiting for some asynchronous operation to complete.',
   useReducer: 'A hook for managing complex state logic by dispatching actions.',
